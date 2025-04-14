@@ -11,7 +11,8 @@ class LLMHandler:
         
         self.client = OpenAI(
             api_key=Setting.API.DEEPSEEK,
-            base_url=Setting.BASE_URL
+            base_url=Setting.BASE_URL,
+            timeout=30
         )
         
     def generate_answer(self, context: str, question: str, metadata: Dict[str, Any] = None) -> str:
@@ -22,7 +23,7 @@ class LLMHandler:
 
         try:
             prompt = (
-                f"Контекст: {context[:3000]}\n\n"
+                f"Контекст: {context[:2000]}\n\n"
                 f"Метаданные: {str(metadata)}\n\n"
                 f"Вопрос: {question}\n\n"
                 "Ответ:"

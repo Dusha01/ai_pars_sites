@@ -1,8 +1,13 @@
 {
     "sites": [
-      "https://dvgups.ru",
-      "https://pypi.org",
-      "https://example.com"
+      "https://kom.city/?ysclid=m9hfx3mwzd709275367",
+      "https://voshod.vanino.org/?ysclid=m9hfxr1kxi758946724",
+      "https://riabir.ru/?ysclid=m9hfyetbm1732798475"
     ],
-    "question": "Какие файлы и таблицы представлены на странице? Опиши основные элементы."
+    "question": 
+    [
+      "О каких городах говориться на сайтах?",
+      "Напиши одну последнюю новость с каждого сайта",
+      "Пришлм контакты с каждого сайта"
+    ]
   }
