@@ -1,0 +1,8 @@
+{
+    "sites": [
+      "https://dvgups.ru",
+      "https://pypi.org",
+      "https://example.com"
+    ],
+    "question": "Какие файлы и таблицы представлены на странице? Опиши основные элементы."
+  }
