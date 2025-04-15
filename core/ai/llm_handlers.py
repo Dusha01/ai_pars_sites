@@ -6,11 +6,11 @@ from typing import Dict, Any
 
 class LLMHandler:
     def __init__(self):
-        if not Setting.API.DEEPSEEK:
+        if not Setting.API.AI:
             raise ValueError("API key not provided")
         
         self.client = OpenAI(
-            api_key=Setting.API.DEEPSEEK,
+            api_key=Setting.API.AI,
             base_url=Setting.BASE_URL,
             timeout=30
         )
