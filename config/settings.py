@@ -3,9 +3,9 @@ import os
 
 class Setting:
     LLM_MODEL = "deepseek-chat-v3-0324"
-    MAX_TOKENS = 1000         #Выяснить
+    MAX_TOKENS = 3000
     REQUEST_TIMEOUT = 10
     CACHE_SIZE = 5
 
     class API:
-        DEEPSEEK = os.getenv("DEEPSEEK_API_KEY") #Ключ
+        DEEPSEEK = os.getenv("DEEPSEEK_API_KEY")
