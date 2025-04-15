@@ -9,3 +9,6 @@ class Setting:
 
     class API:
         DEEPSEEK = os.getenv("DEEPSEEK_API_KEY")
+
+    class URL:
+        BASE_URL = os.getenv("BASE_URL")

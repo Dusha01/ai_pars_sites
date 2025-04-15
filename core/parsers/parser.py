@@ -15,27 +15,21 @@ class Parser:
             self.html = None
     def remove_elements(self):
         if self.soup:
-            for selector in ["footer", "#footer", ".footer", "nav", "#nav", ".nav", "script", "#script", ".script", "style", "#style", ".style"]:
+            for selector in ["header", "#header", ".header", "footer", "#footer", ".footer", "nav", "#nav", ".nav", "script", "#script", ".script", "style", "#style", ".style"]:
                 for element in self.soup.select(selector):
                     element.decompose()
-
     def parse(self):
         self.fetch_html()
         if self.html is None:
             return None
-
         self.soup = BeautifulSoup(self.html, 'html.parser')
         self.remove_elements()
-        text = self.soup.get_text(separator='\n', strip=True)
+        text = self.soup.get_text(sep='\n', strip=True)
         return text
 
 if __name__ == '__main__':
-    url = "https://ru.wikipedia.org/wiki/Хорватия"
+    url = "https://dvgups.ru/"
     parser = Parser(url)
     text = parser.parse()
 
-    if text:
-        print("Извлеченный текст:\n")
-        print(text)
-    else:
-        print("Не удалось извлечь текст.")
+    print(text)
